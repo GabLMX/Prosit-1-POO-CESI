@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+
 #include "Vector2.hpp"
 #include "Point2.hpp"
 
@@ -12,8 +13,3 @@ Vector2 subPoint2(Point2 r, Point2 p){ //Utilise deux points.
     Vector2 resultat(r.getxPoint2() - p.getxPoint2(), r.getyPoint2() - p.getyPoint2());
     return resultat;
 }
-
-/*
-Point2 addPoint2(Point2 p, Vector2 r);
-Vector2 subPoint2(Vector2 r, Point2 p);
-*/
