@@ -1,7 +1,7 @@
+#include "Segment2.hpp"
+
 #include <iostream>
 #include <cmath>
-
-#include "Segment2.hpp"
 
 Segment2::Segment2(Point2 origin, Vector2 direction)
     : origin(origin), direction(direction)
@@ -24,7 +24,7 @@ float Segment2::lengthSegment2(){
 std::string Segment2::intersectSegment2(Segment2 s, Segment2 r, Point2 &p){
     Point2 oa = s.getOriginSegment2(), ob = r.getOriginSegment2();
     Vector2 da = s.getDirectionSegment2(), db = r.getDirectionSegment2();
-    Vector2 dc = subPoint2(ob, oa);
+    Vector2 dc = ob.subPoint2(oa);
 
     std::string state;
 
@@ -36,7 +36,7 @@ std::string Segment2::intersectSegment2(Segment2 s, Segment2 r, Point2 &p){
         v = dc.crossVector2(da) / det;
         if ((u >= 0.0 and u <= 1.0) and (v >= 0.0 and v <= 1.0)){
             Vector2 temp = da.dotscalarVector2(u);
-            p = addPoint2(oa, temp);
+            p = oa.addPoint2(temp);
             state = "Point";
         }
         else{
@@ -59,7 +59,7 @@ std::string Segment2::intersectSegment2(Segment2 s, Segment2 r, Point2 &p){
                 p = ob;
                 state = "ColinearIntersecting";
             } else if (d2 >= 0.0 && d2 <= 1.0) {
-                Point2 temp_ob_db = addPoint2(ob, db);
+                Point2 temp_ob_db = ob.addPoint2(db);
                 p = temp_ob_db;
                 state = "ColinearIntersecting";
             } else {

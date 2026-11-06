@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #pragma once
+
 #include "Vector2.hpp"
 
 class Point2{
@@ -16,6 +17,5 @@ public:
     void setyPoint2(float y);
     void printPoint2();
     Point2 addPoint2(Vector2 r);
-    Vector2 subPoint2(Point2 p);
-    //Enlever PointSegment2.hpp et mettre les deux derniers dans Point2.cpp.
+    Vector2 subPoint2(Point2 r);
 };

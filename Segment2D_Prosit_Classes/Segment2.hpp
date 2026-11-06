@@ -5,10 +5,6 @@
 #include "Vector2.hpp"
 #include "Point2.hpp"
 
-#include "PointSegment2.hpp"
-
-
-
 class Segment2{
 private:
     Point2 origin;
