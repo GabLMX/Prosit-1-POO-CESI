@@ -5,6 +5,8 @@
 #include "Vector2.hpp"
 #include "Segment2.hpp"
 
+// Faire "cd Segment2D_Prosit_Classes" dans le Terminal pour pouvoir ensuite faire "g++ main.cpp Point2.cpp Segment2.cpp Vector2.cpp -o program".
+
 int main(void){
     Point2 p1(0.0, 0.0);
     Point2 p2(2.0, 2.0);
